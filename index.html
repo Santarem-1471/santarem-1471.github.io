@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Príncipe Charter - A Classical Liberal Federation on the Equator</title>
+<meta name="description" content="A stress-tested constitutional framework for a minimal-state federation on Príncipe Island, Gulf of Guinea. The Earth testbed for Mars governance.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: #0a0e1a; color: #e0e6f0; font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 70px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+  .kicker { font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: #5a8fc7; margin-bottom: 14px; }
+  h2 { font-size: 32px; font-weight: 200; color: #fff; letter-spacing: 1px; margin-bottom: 24px; }
+  h2 em { font-style: normal; color: #d4af37; }
+  p.lead { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.75); max-width: 760px; margin-bottom: 16px; }
+  p.lead strong { color: #fff; font-weight: 500; }
+
+  /* HERO */
+  .hero { text-align: center; padding: 110px 0 80px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .hero .kicker { color: #d4af37; }
+  .hero h1 { font-size: 58px; font-weight: 100; color: #fff; letter-spacing: 4px; line-height: 1.15; margin-bottom: 20px; }
+  .hero .sub { font-size: 20px; font-weight: 200; color: rgba(255,255,255,0.65); max-width: 680px; margin: 0 auto 40px; }
+  .hero .sub em { font-style: normal; color: #d4af37; }
+  .stat-strip { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; margin-top: 30px; }
+  .stat { padding: 0 34px; border-right: 1px solid rgba(255,255,255,0.1); }
+  .stat:last-child { border-right: none; }
+  .stat .n { font-size: 26px; font-weight: 200; color: #fff; }
+  .stat .l { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,220,240,0.45); margin-top: 2px; }
+
+  /* MAP */
+  .map-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+  @media (max-width: 760px) { .map-wrap { grid-template-columns: 1fr; } .hero h1 { font-size: 38px; } }
+  .map-note { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,220,240,0.3); text-align: center; margin-top: 8px; }
+  .fact-list { list-style: none; }
+  .fact-list li { padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.75); }
+  .fact-list li b { color: #d4af37; font-weight: 500; }
+
+  /* PILLARS */
+  .grid7 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+  .pillar { border: 1px solid rgba(90,143,199,0.18); border-radius: 8px; padding: 20px; background: rgba(255,255,255,0.02); }
+  .pillar .num { font-size: 11px; letter-spacing: 2px; color: #d4af37; margin-bottom: 6px; }
+  .pillar h3 { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 6px; }
+  .pillar p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.6); }
+
+  /* STATE */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 30px; }
+  @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+  .func { border: 1px solid rgba(212,175,55,0.25); border-radius: 8px; padding: 26px; background: rgba(212,175,55,0.03); }
+  .func h3 { font-size: 20px; font-weight: 300; color: #d4af37; margin-bottom: 8px; letter-spacing: 1px; }
+  .func p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.7); }
+  .locks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .lock { border-left: 2px solid #5a8fc7; padding: 6px 0 6px 18px; }
+  .lock h4 { font-size: 14px; color: #fff; font-weight: 500; margin-bottom: 4px; }
+  .lock p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); }
+
+  /* MONEY */
+  .tax-strip { display: flex; flex-wrap: wrap; gap: 0; margin: 28px 0 40px; justify-content: flex-start; }
+  .tax { padding: 0 28px; border-right: 1px solid rgba(255,255,255,0.1); text-align: center; }
+  .tax:first-child { padding-left: 0; }
+  .tax:last-child { border-right: none; }
+  .tax .n { font-size: 30px; font-weight: 200; color: #d4af37; }
+  .tax .l { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,220,240,0.45); }
+  .bar-row { margin-bottom: 18px; }
+  .bar-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+  .bar-label span:first-child { color: rgba(255,255,255,0.8); }
+  .bar-label span:last-child { color: #d4af37; }
+  .bar-track { height: 10px; background: rgba(255,255,255,0.05); border-radius: 5px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 5px; background: linear-gradient(90deg, #2a5a8a, #5a8fc7); }
+  .phase-note { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.6); border: 1px solid rgba(90,143,199,0.2); border-radius: 8px; padding: 18px 22px; margin-top: 26px; }
+  .phase-note b { color: #d4af37; font-weight: 500; }
+
+  /* PATHS */
+  .path { border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 28px; margin-bottom: 16px; background: rgba(255,255,255,0.02); }
+  .path .tag { display: inline-block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+  .path.p1 .tag { background: rgba(90,143,199,0.15); color: #5a8fc7; }
+  .path.p2 .tag { background: rgba(212,175,55,0.12); color: #d4af37; }
+  .path h3 { font-size: 20px; font-weight: 300; color: #fff; margin-bottom: 10px; }
+  .path p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); margin-bottom: 8px; }
+  .honesty { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.55); font-style: italic; max-width: 760px; margin-top: 8px; }
+
+  /* TIMELINE */
+  .timeline { display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 0; margin: 46px 0 10px; }
+  .timeline-node { text-align: center; width: 150px; }
+  .timeline-dot { width: 13px; height: 13px; border-radius: 50%; margin: 0 auto 8px; }
+  .timeline-year { font-size: 17px; font-weight: 200; color: #fff; }
+  .timeline-event { font-size: 10px; color: rgba(200,220,240,0.4); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+  .timeline-line { width: 46px; height: 2px; background: linear-gradient(90deg, rgba(58,143,212,0.3), rgba(196,90,58,0.3)); margin-top: 6px; }
+
+  /* MARS */
+  .proto-grid { display: grid; grid-template-columns: 150px 1fr 1fr; gap: 8px; font-size: 13px; }
+  @media (max-width: 700px) { .proto-grid { grid-template-columns: 1fr; } .proto-grid .ph { display: none; } }
+  .proto-grid > div { padding: 12px 14px; border-radius: 6px; }
+  .proto-grid .ph { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding-bottom: 4px; }
+  .proto-grid .lab { color: rgba(255,255,255,0.5); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; display: flex; align-items: center; }
+  .proto-grid .e { background: rgba(58,143,212,0.06); border: 1px solid rgba(58,143,212,0.15); color: rgba(255,255,255,0.75); font-weight: 300; }
+  .proto-grid .m { background: rgba(196,90,58,0.06); border: 1px solid rgba(196,90,58,0.15); color: rgba(255,255,255,0.75); font-weight: 300; }
+  .ph.earth-h { color: #3a8fd4; }
+  .ph.mars-h { color: #c45a3a; }
+  .final-quote { font-size: 25px; font-weight: 200; color: rgba(255,255,255,0.75); letter-spacing: 1px; line-height: 1.5; max-width: 720px; margin: 56px auto 0; text-align: center; }
+  .final-quote em { font-style: normal; color: #d4af37; }
+
+  /* LATITUDE */
+  .lat-row { display: grid; grid-template-columns: 190px 1fr 70px; gap: 14px; align-items: center; margin-bottom: 14px; font-size: 13px; }
+  .lat-row .site { color: rgba(255,255,255,0.75); text-align: right; }
+  .lat-row .deg { color: #d4af37; }
+  .lat-track { height: 9px; background: rgba(255,255,255,0.05); border-radius: 5px; overflow: hidden; }
+  .lat-fill { height: 100%; border-radius: 5px; }
+  .lat-note { font-size: 13px; color: rgba(255,255,255,0.5); font-weight: 300; margin-top: 16px; }
+
+  /* OPEN QUESTIONS */
+  .oq { list-style: none; max-width: 780px; }
+  .oq li { padding: 12px 0 12px 26px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); position: relative; }
+  .oq li::before { content: "?"; position: absolute; left: 0; color: #d4af37; }
+
+  /* FOOTER */
+  footer { padding: 70px 0 90px; text-align: center; }
+  .sig { font-size: 22px; font-weight: 200; letter-spacing: 4px; color: #d4af37; margin-bottom: 8px; }
+  .sig-note { font-size: 12px; font-weight: 300; color: rgba(200,220,240,0.4); max-width: 560px; margin: 0 auto 26px; }
+  .contact { font-size: 14px; color: #5a8fc7; letter-spacing: 1px; }
+  .fine { font-size: 11px; color: rgba(200,220,240,0.25); letter-spacing: 2px; text-transform: uppercase; margin-top: 30px; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="kicker">The Príncipe Charter</div>
+    <h1>A new nation,<br>run on a <em>minimal protocol</em>.</h1>
+    <div class="sub">A stress-tested constitutional framework for a classical liberal federation on Príncipe - a mountainous rainforest island in the Gulf of Guinea - and the Earth testbed for the governance <em>Mars</em> will need.</div>
+    <div class="stat-strip">
+      <div class="stat"><div class="n">1.6°N</div><div class="l">Latitude</div></div>
+      <div class="stat"><div class="n">136 km²</div><div class="l">Island Area</div></div>
+      <div class="stat"><div class="n">7</div><div class="l">Rights. No More.</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Federal Functions</div></div>
+      <div class="stat"><div class="n">~50 pages</div><div class="l">Entire Legal Code</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- THE IDEA -->
+<section>
+  <div class="container">
+    <div class="kicker">The Idea</div>
+    <h2>Restart the 1787 experiment. <em>Skip the accumulation.</em></h2>
+    <p class="lead">The American founding was a minimal constitutional protocol that acquired 250 years of administrative sediment. The Príncipe Charter runs the original experiment again on clean hardware: a <strong>negative-rights constitution</strong> under which the state exists to do exactly two things - referee disputes and maintain a passive defense shield - and is constitutionally forbidden from doing anything else.</p>
+    <p class="lead">No legislature. No agencies. No income tax. No government debt. Everything else - infrastructure, medicine, money, education - is voluntary exchange between free people, protected by seven inviolable rights and a ~50-page Founding Code.</p>
+  </div>
+</section>
+
+<!-- THE ISLAND -->
+<section>
+  <div class="container">
+    <div class="kicker">The Island</div>
+    <h2>Príncipe. <em>On the equator.</em> In the Atlantic.</h2>
+    <p class="lead">Príncipe is a drowned volcano wrapped in primary rainforest - green phonolite towers rising out of the southern jungle, golden-sand bays, waterfalls that run straight into the sea. It is one of the least-visited islands on Earth and a UNESCO biosphere dense with species that exist nowhere else. The beauty is not incidental to the project; it is a founding asset. <strong>Nobody relocates a family, a company, or a fortune to an ugly place.</strong></p>
+    <div class="map-wrap">
+      <div>
+        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <defs>
+            <radialGradient id="sea" cx="50%" cy="50%" r="75%">
+              <stop offset="0%" stop-color="#10203a"/><stop offset="100%" stop-color="#0a0e1a"/>
+            </radialGradient>
+          </defs>
+          <rect width="420" height="380" fill="url(#sea)" rx="10"/>
+          <!-- island body -->
+          <path d="M 200 52
+                   C 240 44, 280 62, 292 96
+                   C 306 118, 300 140, 290 162
+                   C 298 186, 288 214, 270 238
+                   C 256 268, 232 296, 208 312
+                   C 192 324, 172 318, 162 298
+                   C 144 276, 132 248, 130 220
+                   C 118 196, 122 168, 134 146
+                   C 128 118, 142 88, 166 68
+                   C 176 58, 188 54, 200 52 Z"
+                fill="#16283f" stroke="#3a5a7a" stroke-width="1.5"/>
+          <!-- Obo park (southern ~40%) -->
+          <path d="M 288 170
+                   C 296 192, 287 216, 270 238
+                   C 256 268, 232 296, 208 312
+                   C 192 324, 172 318, 162 298
+                   C 146 278, 134 252, 131 226
+                   C 176 210, 240 196, 288 170 Z"
+                fill="rgba(60,140,90,0.28)" stroke="rgba(90,190,130,0.5)" stroke-width="1" stroke-dasharray="4 3"/>
+          <text x="205" y="266" fill="rgba(120,210,155,0.85)" font-size="12" font-family="system-ui" text-anchor="middle">OBO NATIONAL PARK</text>
+          <text x="205" y="281" fill="rgba(120,210,155,0.5)" font-size="9" font-family="system-ui" text-anchor="middle">90% constitutionally locked forever</text>
+          <!-- Capital -->
+          <circle cx="252" cy="108" r="5" fill="#d4af37"/>
+          <text x="264" y="104" fill="#d4af37" font-size="11" font-family="system-ui">Santo António</text>
+          <text x="264" y="117" fill="rgba(212,175,55,0.55)" font-size="9" font-family="system-ui">Capital District · Supreme Court</text>
+          <!-- Airport -->
+          <circle cx="196" cy="80" r="4" fill="#5a8fc7"/>
+          <text x="118" y="76" fill="#5a8fc7" font-size="10" font-family="system-ui">Airport District</text>
+          <!-- Port -->
+          <circle cx="278" cy="140" r="4" fill="#5a8fc7"/>
+          <text x="292" y="144" fill="#5a8fc7" font-size="10" font-family="system-ui">Port District</text>
+          <!-- Open districts -->
+          <text x="176" y="180" fill="rgba(255,255,255,0.55)" font-size="10" font-family="system-ui">Open Districts 4-7</text>
+          <text x="176" y="193" fill="rgba(255,255,255,0.3)" font-size="9" font-family="system-ui">zero federal zoning</text>
+          <!-- equator line -->
+          <line x1="0" y1="352" x2="420" y2="352" stroke="rgba(212,175,55,0.35)" stroke-width="1" stroke-dasharray="8 5"/>
+          <text x="10" y="345" fill="rgba(212,175,55,0.6)" font-size="9" font-family="system-ui" letter-spacing="2">EQUATOR - 96 NAUTICAL MILES SOUTH</text>
+        </svg>
+        <div class="map-note">Illustrative schematic - not a survey map</div>
+      </div>
+      <ul class="fact-list">
+        <li><b>Location:</b> Gulf of Guinea, ~250 km off West Africa, part of São Tomé and Príncipe (STP)</li>
+        <li><b>Population:</b> ~8,000 residents - each offered a voluntary Clean Break payment of ~$100,000, roughly 24 years of average income</li>
+        <li><b>Conservation:</b> 40% of the island is Obo National Park - untouched rainforest and volcanic peaks; the Charter locks 90% of it as permanent, constitutionally irrevocable conservation land, stronger than the current UNESCO designation</li>
+        <li><b>Development zone:</b> ~82 km² across 7 sovereign districts, each free to compete on governance above the Charter floor</li>
+        <li><b>Existing assets:</b> working airport, working port, power, connectivity - day-one foundations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SEVEN PILLARS -->
+<section>
+  <div class="container">
+    <div class="kicker">The Bill of Rights</div>
+    <h2>Seven pillars. <em>All negative.</em> None amendable.</h2>
+    <div class="grid7">
+      <div class="pillar"><div class="num">I</div><h3>Self-Ownership</h3><p>Absolute bodily and neural autonomy. No FDA equivalent - disclosure, not approval. Private certification markets.</p></div>
+      <div class="pillar"><div class="num">II</div><h3>Property</h3><p>No eminent domain. No forfeiture. No qualifications. The state has no mechanism to take, ever.</p></div>
+      <div class="pillar"><div class="num">III</div><h3>Signal</h3><p>Zero speech laws. Fraud, defamation, and doxxing are prosecuted as violations of the other rights - never of speech itself.</p></div>
+      <div class="pillar"><div class="num">IV</div><h3>Defense</h3><p>Individual arms rights absolute. National defense is a passive shield: AI maritime surveillance, cyber hardening, non-kinetic denial.</p></div>
+      <div class="pillar"><div class="num">V</div><h3>Contract</h3><p>Total sanctity of voluntary agreements. No "unconscionability" backdoor for discretionary power to grow through.</p></div>
+      <div class="pillar"><div class="num">VI</div><h3>Sound Money</h3><p>No central bank. Gold-pegged unit of account. All currencies welcome. Government fees payable in anything, at market rate.</p></div>
+      <div class="pillar"><div class="num">VII</div><h3>No Debt</h3><p>Government borrowing constitutionally forbidden. No exceptions, no emergency clause. Catastrophe insurance instead.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE STATE -->
+<section>
+  <div class="container">
+    <div class="kicker">The State</div>
+    <h2>Two functions. <em>Triple-locked</em> against growth.</h2>
+    <div class="two-col">
+      <div class="func"><h3>The Referee</h3><p>A Supreme Court of 3-5 judges imported from respected common law jurisdictions, chosen by an independent international committee - never by the capital provider. 15-year non-renewable terms, salaries ring-fenced from endowment yield. Loser-pays courts with a private contingency market, so access to justice doesn't require wealth.</p></div>
+      <div class="func"><h3>The Guard</h3><p>A passive defense shield: AI maritime surveillance, cyber defense, coastal area denial, catastrophe insurance. No standing army, no offensive capability. Defense reframed as resilience - because the realistic threat to a small free jurisdiction is economic coercion, not invasion.</p></div>
+    </div>
+    <div class="locks">
+      <div class="lock"><h4>1. Enumerated & Locked</h4><p>Federal powers exhaustively listed. Adding one requires unanimous consent of all 7 districts.</p></div>
+      <div class="lock"><h4>2. 10-Year Sunset</h4><p>Every expansion of federal jurisdiction auto-expires unless actively reaffirmed by supermajority each decade.</p></div>
+      <div class="lock"><h4>3. District Nullification</h4><p>Any single district can nullify a federal expansion within its borders. Creep must win everywhere, forever. Liberty only has to win once.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE MONEY -->
+<section>
+  <div class="container">
+    <div class="kicker">The Financial Model</div>
+    <h2>A government that <em>cannot</em> grow into your wallet.</h2>
+    <div class="tax-strip">
+      <div class="tax"><div class="n">0%</div><div class="l">Income Tax</div></div>
+      <div class="tax"><div class="n">0%</div><div class="l">Corporate Tax</div></div>
+      <div class="tax"><div class="n">0%</div><div class="l">Capital Gains</div></div>
+      <div class="tax"><div class="n">2%</div><div class="l">Import Cap - Only Federal Tax</div></div>
+      <div class="tax"><div class="n">$0</div><div class="l">Government Debt, Forever</div></div>
+    </div>
+    <div class="bar-row"><div class="bar-label"><span>Sovereign Endowment - yield funds the Court and the Guard permanently</span><span>$5-7B</span></div><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Development partnership contribution to STP (~1x national GDP)</span><span>~$1B</span></div><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Clean Break payments - $100K to each of ~8,000 residents</span><span>~$800M</span></div><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Liquidity and legal reserve</span><span>~$1.2B</span></div><div class="bar-track"><div class="bar-fill" style="width:13%"></div></div></div>
+    <div class="phase-note"><b>Staged deployment.</b> The full program is $8-10B, but Phase 1 - the special jurisdiction - requires on the order of $500M-1B. The endowment and compact contribution deploy only after the model has proven itself with real residents, real commerce, and real revenue to the host nation. Infrastructure is not in the budget because the government doesn't build it: private enterprise does, for profit.</div>
+  </div>
+</section>
+
+<!-- SOVEREIGNTY -->
+<section>
+  <div class="container">
+    <div class="kicker">Sovereignty</div>
+    <h2>Two paths. <em>Sequenced honestly.</em></h2>
+    <p class="honesty">STP's constitution defines the national territory as including Príncipe, and no state has sold sovereign territory in the modern era. This framework does not pretend otherwise - it sequences around it.</p>
+    <div style="height:26px"></div>
+    <div class="path p1">
+      <div class="tag">Phase 1 - The Special Jurisdiction</div>
+      <h3>Enabling legislation, negotiated with the people who already govern Príncipe</h3>
+      <p>Príncipe has had its own Autonomous Regional Government since 1995 - a real counterparty. Phase 1 is a special governance jurisdiction created by STP enabling legislation and negotiated jointly with the Regional Government: the Charter as governing framework, its own courts under the Founding Code, the 2% fiscal model - while STP retains formal sovereignty and earns an ongoing revenue share.</p>
+      <p>The precedent is Honduras's ZEDE regime and Próspera - including the lesson of the 2022 repeal. Mitigations: bilateral investment treaty protection, ICSID arbitration, land assembly exclusively through voluntary purchase, and an economic structure that makes the jurisdiction more valuable to STP alive than dead.</p>
+    </div>
+    <div class="path p2">
+      <div class="tag">Phase 2 - The Free Association Compact</div>
+      <h3>Full internal sovereignty for 200+ years, ratified by a nation that has already seen it work</h3>
+      <p>The endgame: a Cook Islands-style Free Association compact granting the Federation full internal sovereignty - constitution, courts, immigration, money - for 200+ years, with an independence referendum pathway. It requires constitutional amendment and, realistically, a national referendum in STP. Which is exactly why Phase 1 comes first: referendums are won on demonstrated benefit, not projections.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-node"><div class="timeline-dot" style="background:rgba(58,143,212,0.6);border:1px solid #3a8fd4;"></div><div class="timeline-year">2027</div><div class="timeline-event">Enabling Legislation</div></div>
+      <div class="timeline-line"></div>
+      <div class="timeline-node"><div class="timeline-dot" style="background:rgba(58,143,212,0.4);border:1px solid rgba(58,143,212,0.6);"></div><div class="timeline-year">2030</div><div class="timeline-event">Jurisdiction Operating</div></div>
+      <div class="timeline-line"></div>
+      <div class="timeline-node"><div class="timeline-dot" style="background:rgba(212,175,55,0.4);border:1px solid rgba(212,175,55,0.7);"></div><div class="timeline-year">2035+</div><div class="timeline-event">Compact & Referendum</div></div>
+      <div class="timeline-line"></div>
+      <div class="timeline-node"><div class="timeline-dot" style="background:rgba(196,90,58,0.4);border:1px solid rgba(196,90,58,0.6);"></div><div class="timeline-year">2040s</div><div class="timeline-event">Protocol Ships to Mars</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LAUNCH -->
+<section>
+  <div class="container">
+    <div class="kicker">The Equatorial Advantage</div>
+    <h2>The best launch latitude <em>money can't currently buy.</em></h2>
+    <div class="lat-row"><div class="site">Cape Canaveral</div><div class="lat-track"><div class="lat-fill" style="width:95%;background:rgba(255,255,255,0.18)"></div></div><div class="deg">28.5°N</div></div>
+    <div class="lat-row"><div class="site">Boca Chica (Starbase)</div><div class="lat-track"><div class="lat-fill" style="width:87%;background:rgba(255,255,255,0.18)"></div></div><div class="deg">26.0°N</div></div>
+    <div class="lat-row"><div class="site">Kourou (ESA)</div><div class="lat-track"><div class="lat-fill" style="width:17%;background:rgba(90,143,199,0.5)"></div></div><div class="deg">5.2°N</div></div>
+    <div class="lat-row"><div class="site"><b style="color:#d4af37">Príncipe</b></div><div class="lat-track"><div class="lat-fill" style="width:5%;background:#d4af37"></div></div><div class="deg">1.6°N</div></div>
+    <div class="lat-note">Lower latitude = more free rotational velocity (~465 m/s at the equator) and direct access to equatorial and GEO inclinations without costly plane changes. Príncipe out-positions every major Western launch site - inside a jurisdiction with a 50-page legal code instead of an FAA.</div>
+  </div>
+</section>
+
+<!-- MARS PROTOCOL -->
+<section>
+  <div class="container">
+    <div class="kicker">The Mars Protocol</div>
+    <h2>Every design decision maps to a <em>Mars requirement</em>.</h2>
+    <div class="proto-grid">
+      <div class="ph"></div><div class="ph earth-h e" style="background:none;border:none">Príncipe - Earth Testbed</div><div class="ph mars-h m" style="background:none;border:none">Mars Colony - Deployment</div>
+      <div class="lab">Governance</div><div class="e">Negative-rights constitution. 2 federal functions. 7 competing districts.</div><div class="m">Same protocol - proven with real humans for a decade before launch.</div>
+      <div class="lab">Legal System</div><div class="e">50-page Founding Code. Loser-pays courts. Zero agencies.</div><div class="m">Fork the code with years of precedent and known failure modes.</div>
+      <div class="lab">Economy</div><div class="e">Gold-pegged, multi-currency, zero debt, 2% import cap.</div><div class="m">Monetary architecture proven stable without a central bank.</div>
+      <div class="lab">Medical / BCI</div><div class="e">Disclosure-not-approval. Private certification. No FDA.</div><div class="m">Neural interfaces and novel medicine tested in a free jurisdiction first.</div>
+      <div class="lab">Infrastructure</div><div class="e">Fully private, for-profit. Island isolation constrains resources.</div><div class="m">Same model - island scarcity is the closest Earth analog to Mars scarcity.</div>
+      <div class="lab">Anti-Creep</div><div class="e">Enumeration + sunset + nullification, running live.</div><div class="m">Years of data on exactly how governments try to grow - and how to stop them.</div>
+    </div>
+    <div class="final-quote">You don't debug an operating system <em>after</em> you've shipped it to Mars.<br>You run it on Earth first.</div>
+  </div>
+</section>
+
+<!-- OPEN QUESTIONS -->
+<section>
+  <div class="container">
+    <div class="kicker">What We Haven't Solved</div>
+    <h2>Open questions. <em>On purpose.</em></h2>
+    <p class="lead">A framework that claims to have no unsolved problems is advertising that it hasn't been stress-tested. These are ours:</p>
+    <ul class="oq">
+      <li>The exchange rate oracle - the exact mechanism for gold-to-currency conversion at the point of government fee payment.</li>
+      <li>The Founding Code itself - the ~50 pages of statutory law covering contracts, property, and torts are specified but not yet drafted.</li>
+      <li>The independence referendum trigger - what precisely activates the post-compact vote, and who is eligible.</li>
+      <li>Phase 1 jurisdiction boundary - which land forms the initial special jurisdiction, and the voluntary acquisition sequence.</li>
+      <li>Legal entity formation - the vehicle to negotiate, hold capital, and sign agreements does not yet exist.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<fo
